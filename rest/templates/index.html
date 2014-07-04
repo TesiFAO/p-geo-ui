@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Satellite Images Download</title>
+        <script type='text/javascript' src='http://code.jquery.com/jquery-1.10.1.min.js'></script>
+        <!--<script type='text/javascript' src='http://netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js'></script>-->
+        <script type='text/javascript' src='http://fenixapps.fao.org/repository/js/chosen/1.0.0/chosen.jquery.min.js'></script>
+        <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.js'></script>
+        <link rel='icon' type='image/png' href='http://fenixapps.fao.org/repository/favicon/faostat.png'>
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,900,700|Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
+        <!--<link href='http://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css' rel='stylesheet'>-->
+        <link href='http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' rel='stylesheet'>
+        <link href='http://fenixapps.fao.org/repository/js/chosen/1.0.0/chosen.min.css' rel='stylesheet'>
+        <link href='http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js' rel='stylesheet'>
+        <style type=text/css>{{ get_resource_as_string('../static/css/faostat.css') }}</style>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/faostat-home.css') }}">
+    </head>
+    <body>
+        <div class='fs_main_holder'>
+            <div class='fs-head'>
+                <div class='fs-logo-holder'>
+                    <div class='fs-logo'></div>
+                </div>
+                <div class='fs-united'>
+                    <p style='text-transform:uppercase;' id='fs-fao'>
+                        FOOD AND AGRICULTURE ORGANIZATION OF THE UNITED NATIONS
+                    </p>
+                    <p style='text-transform:uppercase;' class='fs-bold fs-statistics-division'>
+                        Statistics Division
+                    </p>
+                </div>
+                <div class='fs-languages'>
+                    <span id='langE'>ENGLISH</span>|
+                    <span id='langF'>FRAN&Ccedil;AIS</span>|
+                    <span id='langS'>ESPA&Ntilde;OL</span>
+                </div>
+            </div>
+            <div id='fs-menu-header-sticky-wrapper' class='sticky-wrapper' style='height: 33px;'>
+                <div class='fs-menu-holder' id='fs-menu-header'>
+                    <div class='fs-menu'>
+                        <span id='home' class='fs-menu-selected'>Home</span>
+                        <span id='modis'>MODIS</span>
+                        <span id='trmm'>TRMM</span>
+                    </div>
+                </div>
+            </div>
+            <div class='fs-footer'>
+                <div class='fs-row fs-goToBottomPadding'>
+                    <div class='fs_column_12'>
+                        <img src='../static/images/logo-footer.png' alt='faostat-for a world without hunger' class='fs-logo-footer'>
+                        <span class='fs-footer-link'>
+                            <a target='_blank' href='http://www.fao.org/corp/copyright/$_ISO2_LANG/'>&#169; FAO 2014</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class='fs-feedback'>
+                <div id='faostat-feedback-system' class='fs-feedback-system-button' class='various myButton'
+                     data-fancybox-type='iframe' href='http://fenixapps.fao.org/feedbacksystem/' target='myFanzy'>
+                    <span> HELP US WITH YOUR FEEDBACK - GO TO FEEDBACK SYSTEM <i class='fa fa-caret-right'></i></span>
+                    <div class='fs-feedback-icon'></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

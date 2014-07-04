@@ -15,50 +15,68 @@
         <link rel='stylesheet' href='{{url_for("static", filename="css/faostat-home.css")}}'>
     </head>
     <body>
-        <div class='fs_main_holder'>
-            <div class='fs-head'>
-                <div class='fs-logo-holder'>
-                    <div class='fs-logo'></div>
+        <div class='container' style='background-color: #379bce; color: #ffffff;'>
+            <div class='row'>
+                <div class='col-xs-12 col-sm-3 col-md-3 col-lg-3'>
+                    <div class='fs-logo-holder'>
+                        <div class='fs-logo'></div>
+                    </div>
                 </div>
-                <div class='fs-united'>
-                    <p style='text-transform:uppercase;' id='fs-fao'>
-                        FOOD AND AGRICULTURE ORGANIZATION OF THE UNITED NATIONS
-                    </p>
-                    <p style='text-transform:uppercase;' class='fs-bold fs-statistics-division'>
+                <div class='col-xs-12 col-sm-6 col-md-6 col-lg-6'>
+                    <div style='background-color: #379bce; color: white; float: left; height: 50px; padding: 14px 0 0 65px; text-transform:uppercase;'>
+                        <b>FOOD AND AGRICULTURE ORGANIZATION OF THE UNITED NATIONS</b>
+                        <br>
                         Statistics Division
-                    </p>
+                    </div>
                 </div>
-                <div class='fs-languages'>
-                    <span id='langE'>ENGLISH</span>|
-                    <span id='langF'>FRAN&Ccedil;AIS</span>|
-                    <span id='langS'>ESPA&Ntilde;OL</span>
+                <div class='col-xs-12 col-sm-1 col-md-1 col-lg-1' style='padding: 15px 20px 0 0;'>
+                    ENGLISH
+                </div>
+                <div class='col-xs-12 col-sm-1 col-md-1 col-lg-1' style='padding: 15px 20px 0 0;'>
+                    FRAN&Ccedil;AIS
+                </div>
+                <div class='col-xs-12 col-sm-1 col-md-1 col-lg-1' style='padding: 15px 20px 0 0;'>
+                    ESPA&Ntilde;OL
                 </div>
             </div>
-            <div id='fs-menu-header-sticky-wrapper' class='sticky-wrapper' style='height: 33px;'>
-                <div class='fs-menu-holder' id='fs-menu-header'>
-                    <div class='fs-menu'>
-                        <span id='home' class='fs-menu-selected'>Home</span>
-                        <span id='modis'>MODIS</span>
-                        <span id='trmm'>TRMM</span>
+            <div class='row' style='background-color: #ffffff; color: #000000;'>
+                <div class='col-xs-12 col-sm-1 col-md-1 col-lg-1'>
+                    <div style='display: inline-block; border-bottom: 4px solid #40769e; color: #174c74; font: 900 12px "Roboto",sans-serif; transition: border-color 0.218s ease 0s; cursor: pointer; display: inline-block; font: 400 12px "Roboto",sans-serif; margin: 0 8px; max-width: 155px; min-width: 20px; overflow: hidden; padding: 8px 0 4px; text-overflow: ellipsis; text-transform: uppercase; vertical-align: top; white-space: nowrap;'>
+                        Home
+                    </div>
+                </div>
+                <div class='col-xs-12 col-sm-1 col-md-1 col-lg-1'>
+                    <div style='display: inline-block; border-bottom: 4px solid transparent; cursor: pointer; display: inline-block; font: 400 12px "Roboto",sans-serif; margin: 0 8px; max-width: 155px; min-width: 20px; overflow: hidden; padding: 8px 0 4px; text-overflow: ellipsis; text-transform: uppercase; vertical-align: top; white-space: nowrap;'>
+                        MODIS
+                    </div>
+                </div>
+                <div class='col-xs-12 col-sm-1 col-md-1 col-lg-1'>
+                    <div style='display: inline-block; border-bottom: 4px solid transparent; cursor: pointer; display: inline-block; font: 400 12px "Roboto",sans-serif; margin: 0 8px; max-width: 155px; min-width: 20px; overflow: hidden; padding: 8px 0 4px; text-overflow: ellipsis; text-transform: uppercase; vertical-align: top; white-space: nowrap;'>
+                        TRMM
                     </div>
                 </div>
             </div>
-            <div>{{main_content}}</div>
-            <div class='fs-footer'>
-                <div class='fs-row fs-goToBottomPadding'>
-                    <div class='fs_column_12'>
-                        <img src='../static/images/logo-footer.png' alt='faostat-for a world without hunger' class='fs-logo-footer'>
-                        <span class='fs-footer-link'>
-                            <a target='_blank' href='http://www.fao.org/corp/copyright/$_ISO2_LANG/'>&#169; FAO 2014</a>
-                        </span>
+            <div class='row' style='background-color: #174c74; color: #000000;'>
+                <div class='col-xs-12 col-sm-10 col-md-10 col-lg-10'>
+                    <div style='background-color: #174c74; height: 75px; position: relative;'>
+                        <div style='float: left; padding: 0 10px; position: relative; bottom: 20px; position: absolute;'>
+                            <img class="fs-logo-footer" alt="faostat-for a world without hunger" src="../static/images/logo-footer.png">
+                        </div>
+                    </div>
+                </div>
+                <div class='col-xs-12 col-sm-2 col-md-2 col-lg-2'>
+                    <div style='background-color: #174c74; height: 75px; position: relative;'>
+                        <div style='float: left; padding: 0 10px; position: relative; bottom: 20px; position: absolute; color: #ffffff;'>
+                            © FAO 2014
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class='fs-feedback'>
-                <div id='faostat-feedback-system' class='fs-feedback-system-button' class='various myButton'
-                     data-fancybox-type='iframe' href='http://fenixapps.fao.org/feedbacksystem/' target='myFanzy'>
-                    <span> HELP US WITH YOUR FEEDBACK - GO TO FEEDBACK SYSTEM <i class='fa fa-caret-right'></i></span>
-                    <div class='fs-feedback-icon'></div>
+            <div class='row' style='background-color: #379bce; color: #ffffff;'>
+                <div class='col-xs-12 col-sm-11 col-md-11 col-lg-11' style='height: 65px;'>
+                    <div style='background-color: #379bce; cursor: pointer; float: right; height: 50px; color: white; font: 400 14px "Roboto",sans-serif; position: relative; right: 10px; top: 15px;'>
+                        HELP US WITH YOUR FEEDBACK - GO TO FEEDBACK SYSTEM
+                    </div>
                 </div>
             </div>
         </div>
